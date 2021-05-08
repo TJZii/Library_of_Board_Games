@@ -24,3 +24,17 @@ export const addGame = (gameData, history, path) => {
         })
     };
 };
+
+export const deleteGame = () => {
+
+}
+
+
+export const toggleOwned = () => {
+
+}
+
+
+export const toggleWishlist = () => {
+    
+}

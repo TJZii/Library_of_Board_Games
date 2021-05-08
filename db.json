@@ -9,9 +9,9 @@
     ],
     "profile": { "name": "typicode" },
     "Games": [
-        {"id": 1, "name": "Monopoly", "minPlayers": 2, "maxPlayers": 8, "image": "https://cf.geekdo-images.com/9nGoBZ0MRbi6rdH47sj2Qg__original/img/bA8irydTCNlE38QSzM9EhcUIuNU=/0x0/filters:format(jpeg)/pic5786795.jpg", "minutesToPlay": 180, "owned": false, "wished": false},
-        {"id": 2, "name": "Telestrations", "minPlayers": 4, "maxPlayers": 8, "image": "https://cf.geekdo-images.com/oc3u6OQpJkf9TvDw4iI9xA__original/img/Hh2zbSnLEARMlNg0OzImf2-5FIw=/0x0/filters:format(jpeg)/pic4991936.jpg", "minutesToPlay": 30, "owned": false, "wished": false},
-        {"id": 3, "name": "Risk", "minPlayers": 2, "maxPlayers": 6, "image": "https://cf.geekdo-images.com/Oem1TTtSgxOghRFCoyWRPw__original/img/Nu3eXPyOkhtnR3hhpUrtgqRMAfs=/0x0/filters:format(jpeg)/pic4916782.jpg", "minutesToPlay": 120, "owned": false, "wished": false},
-        {"id": 4, "name": "Connect Four", "minPlayers": 2, "maxPlayers": 2, "image": "https://cf.geekdo-images.com/I_ZPIWEvFlrMa8caT4UD-w__original/img/w93rimjstxQr4BVmaZ_Tl5pQGOw=/0x0/filters:format(jpeg)/pic859430.jpg", "minutesToPlay": 10, "owned": false, "wished": false}
+        {"id": 1, "name": "Monopoly", "minPlayers": 2, "maxPlayers": 8, "image": "https://cf.geekdo-images.com/9nGoBZ0MRbi6rdH47sj2Qg__original/img/bA8irydTCNlE38QSzM9EhcUIuNU=/0x0/filters:format(jpeg)/pic5786795.jpg", "minutesToPlay": 180, "owned": false, "wished": false, "scores":[{"id":1, "value":"12/12/2012 -- 0"}]},
+        {"id": 2, "name": "Telestrations", "minPlayers": 4, "maxPlayers": 8, "image": "https://cf.geekdo-images.com/oc3u6OQpJkf9TvDw4iI9xA__original/img/Hh2zbSnLEARMlNg0OzImf2-5FIw=/0x0/filters:format(jpeg)/pic4991936.jpg", "minutesToPlay": 30, "owned": false, "wished": false, "scores":[{"id":1, "value":"12/12/2012 -- 0"}]},
+        {"id": 3, "name": "Risk", "minPlayers": 2, "maxPlayers": 6, "image": "https://cf.geekdo-images.com/Oem1TTtSgxOghRFCoyWRPw__original/img/Nu3eXPyOkhtnR3hhpUrtgqRMAfs=/0x0/filters:format(jpeg)/pic4916782.jpg", "minutesToPlay": 120, "owned": false, "wished": false, "scores":[{"id":1, "value":"12/12/2012 -- 0"}]},
+        {"id": 4, "name": "Connect Four", "minPlayers": 2, "maxPlayers": 2, "image": "https://cf.geekdo-images.com/I_ZPIWEvFlrMa8caT4UD-w__original/img/w93rimjstxQr4BVmaZ_Tl5pQGOw=/0x0/filters:format(jpeg)/pic859430.jpg", "minutesToPlay": 10, "owned": false, "wished": false, "scores":[{"id":1, "value":"12/12/2012 -- 0"}]}
     ]
   }
