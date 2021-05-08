@@ -81,7 +81,8 @@ class GamesInput extends React.Component {
 
                 </Form>
             </div>
-        )
+        );
     }
+};
 
-}
+export default connect(null, {addGame})(GamesInput);
