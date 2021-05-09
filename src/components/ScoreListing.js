@@ -4,7 +4,7 @@ import { ListGroup, ListGroupItem, Button } from 'reactstrap';
 import {removeScore} from '../functions/Scoreboard';
 
 const ScoreListing = (props) => {
-    const deletedScore = (activity) => {
+    const handleDelete = (scores) => {
         props.removeScore(scores.id, scores.games_id)
     }
 
@@ -13,7 +13,7 @@ const ScoreListing = (props) => {
             {props.scores && props.scores.length === 0 ? <h6>There are no current scores for this game.</h6> : <h5>Previous Scores</h5>}
             <ListGroup>
                 {props.scores && props.scores.map(score =>
-                    <ListGroupItem key={score.id}>{score.value} <Button onClick={() => removeScore(score)}>Delete this Score </Button> </ListGroupItem>)}
+                    <ListGroupItem key={score.id}>{score.value} <Button onClick={() => handleDelete(score)}>Delete this Score </Button> </ListGroupItem>)}
             </ListGroup>
         </div>
     );

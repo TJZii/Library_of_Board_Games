@@ -20,6 +20,8 @@ const WishList = (props) => {
                             </Card>
                         </Link>
                     );
+                }else{
+                    return null;
                 }
             })}
         </div>

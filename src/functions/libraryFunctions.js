@@ -20,7 +20,7 @@ export const addGame = (gameData, history, path) => {
         .then(resp => resp.json())
         .then(games => {
             history.push(path)
-            dboardGame({type: 'ADD_GAME', payload: games})
+            boardGame({type: 'ADD_GAME', payload: games})
         })
     };
 };
@@ -32,17 +32,17 @@ export const deleteGame = (gameId) => {
         })
         .then(resp => resp.json())
         .then(games => {
-            dispatch({type: 'DELETE_GAME', payload: games.id})
+            gameKiller({type: 'DELETE_GAME', payload: games.id})
         })
     };
 };
 
 
-export const toggleOwned = (games, gameId) => {
+export const toggleOwned = (games, gamesId) => {
     const updatedOwnership = {...games, owned: !games.owned};
 
     return (dispatch) => {
-        fetch(`http://localhost:3000/games/${gameId}`, {
+        fetch(`http://localhost:3000/games/${gamesId}`, {
             method: 'PATCH',
             headers: {'Content-Type': 'appication/json'},
             body: JSON.stringify({games: updatedOwnership})
@@ -60,10 +60,10 @@ export const toggleWishlist = (games, gamesId) => {
     const updatedWishlist = {...games, wished: !games.wished};
 
     return (dispatch) => {
-        fetch(`http://localhost:3000/games/${gameId}`, {
+        fetch(`http://localhost:3000/games/${gamesId}`, {
             method: 'PATCH',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({destination: updatedBucketList})
+            body: JSON.stringify({destination: updatedWishlist})
         })
         .then(resp => resp.json())
         .then(games => {

@@ -6,7 +6,7 @@ import {deleteGame, toggleOwned, toggleWishlist} from '../functions/libraryFunct
 
 const ShowGames = (props) => {
 
-    let game = props.games.filter(game => game.id == props.match.params.id)[0];
+    let game = props.games.filter(game => game.id === props.match.params.id)[0];
 
     const handleDelete = () => {
         props.deleteGame(game.id);
@@ -26,14 +26,14 @@ const ShowGames = (props) => {
         <div>
           <Card className = 'ShowGames'>
           <CardBody>
-              <CardTitle style={{border: 'dotted' }}>{games.name}, {games.minPlayers} to {games.maxPlayers}</CardTitle>
-              <CardImg className='GameImage' src={games.image} alt={games.name} /><br></br><br></br>
+              <CardTitle style={{border: 'dotted' }}>{game.name}, {game.minPlayers} to {game.maxPlayers}</CardTitle>
+              <CardImg className='GameImage' src={game.image} alt={game.name} /><br></br><br></br>
             </CardBody>
             <Button onClick={handleOwn} className='OwnedButton' style={{alignItems: 'center' }}>
-              {games && games.owned === false ? 'Add to Owned' : 'You own this Game'}
+              {game && game.owned === false ? 'Add to Owned' : 'You own this Game'}
             </Button>
             <Button onClick={handleWish} className='WishButton'>
-              {games && games.wished === false ? 'Add to Wish-List' : 'This is on your Wish-List'}
+              {game && game.wished === false ? 'Add to Wish-List' : 'This is on your Wish-List'}
             </Button>
             <Button onClick={handleDelete} className='DeleteButton'>Remove this Game</Button>
           </Card>
@@ -42,4 +42,6 @@ const ShowGames = (props) => {
         </div>
     );
 
-}
+};
+
+export default connect(null, {deleteGame, toggleOwned, toggleWishlist})(ShowGames);
