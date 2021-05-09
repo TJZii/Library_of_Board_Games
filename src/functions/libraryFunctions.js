@@ -25,16 +25,49 @@ export const addGame = (gameData, history, path) => {
     };
 };
 
-export const deleteGame = () => {
+export const deleteGame = (gameId) => {
+    return (gameKiller) => {
+        fetch(`http://localhost:3000/games/${gameId}`, {
+            method: 'DELETE'
+        })
+        .then(resp => resp.json())
+        .then(games => {
+            dispatch({type: 'DELETE_GAME', payload: games.id})
+        })
+    };
+};
 
-}
+
+export const toggleOwned = (games, gameId) => {
+    const updatedOwnership = {...games, owned: !games.owned};
+
+    return (dispatch) => {
+        fetch(`http://localhost:3000/games/${gameId}`, {
+            method: 'PATCH',
+            headers: {'Content-Type': 'appication/json'},
+            body: JSON.stringify({games: updatedOwnership})
+        })
+        .then(resp => resp.json())
+        .then(games => {
+            dispatch({type: 'TOGGLE_OWNED', payload: games})
+        })
+    };
+};
 
 
-export const toggleOwned = () => {
+export const toggleWishlist = (games, gamesId) => {
 
-}
+    const updatedWishlist = {...games, wished: !games.wished};
 
-
-export const toggleWishlist = () => {
-    
-}
+    return (dispatch) => {
+        fetch(`http://localhost:3000/games/${gameId}`, {
+            method: 'PATCH',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({destination: updatedBucketList})
+        })
+        .then(resp => resp.json())
+        .then(games => {
+            dispatch({type: 'TOGGLE_WISHLIST', payload: games})
+        })
+    };
+};
